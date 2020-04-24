@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-//App routes
+
+//App Routes
 
 Route::get('/menu', 'AppController@menu')
-	->name('menu');
+    ->name('menu');
+
 
