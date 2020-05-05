@@ -13,9 +13,16 @@ class TableCliente extends Migration
      */
     public function up()
     {
+        #id,nome,datanascimento,rg,cpf,timestamps,tipo_cliente
         Schema::create('cliente', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('data_nascimento');
+            $table->string('rg');
+            $table->string('cpf')->unique();
+            $table->string('tipo_cliente');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 
