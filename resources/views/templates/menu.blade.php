@@ -15,7 +15,4 @@
 <BR>
 <BR>
 <BR>
-<div class="text text-center" >
-    <h2> Advocacia </h2>
-<div>
 @endsection
