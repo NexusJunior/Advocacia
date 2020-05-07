@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('template')
 
-@section('content')
+@section('conteudo')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -13,9 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
                 </div>
+                Bem Vindo! {{Auth::user()->name}}
             </div>
         </div>
     </div>

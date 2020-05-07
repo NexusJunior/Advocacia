@@ -3,13 +3,23 @@
 use Illuminate\Support\Facades\Route;
 
 
-//App Routes
-
-Route::get('/menu', 'AppController@menu')
-    ->name('menu');
-
-Route::view('/','templates.rodape');
+//App Login / Logout Routes------------------------------
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'AppController@logout')
+	->name('logout');
+
+//-------------------------------------------------------
+//Apicaçao Routes----------------------------------------
+Route::middleware(['auth'])->group(function(){
+    Route::get('/menu', 'AppController@menu')
+    ->name('menu');
+
+    Route::get('/home', 'HomeController@index')
+    ->name('home');
+
+});
+//-------------------------------------------------------
+
+
