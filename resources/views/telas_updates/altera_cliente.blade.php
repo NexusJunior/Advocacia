@@ -1,4 +1,4 @@
-@extends('template')
+@extends('templates.principal')
 @section('conteudo')
 <!-- Programe aqui------------------------------------->
 

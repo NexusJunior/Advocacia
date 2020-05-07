@@ -13,11 +13,19 @@ Route::get('/logout', 'AppController@logout')
 //-------------------------------------------------------
 //Apicaçao Routes----------------------------------------
 Route::middleware(['auth'])->group(function(){
-    Route::get('/menu', 'AppController@menu')
-    ->name('menu');
 
-    Route::get('/home', 'HomeController@index')
+    //Demais Rotas devem ficar aqui dentro---------------
+
+    Route::get('/home', 'HomeController@home')
     ->name('home');
+
+
+
+
+
+
+
+
 
 });
 //-------------------------------------------------------

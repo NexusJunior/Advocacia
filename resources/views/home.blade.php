@@ -1,22 +1,23 @@
-@extends('template')
+@extends('templates.principal')
 
 @section('conteudo')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+    <div class="row justify-content-center mt-5 p-5">
+       
+                
 
-                <div class="card-body">
+                
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
-                </div>
-                Bem Vindo! {{Auth::user()->name}}
-            </div>
-        </div>
+                        <div class="alert alert-success" role="alert">
+                        Bem Vindo! {{Auth::user()->name}}
+                        </div>
+                
+                
+        
     </div>
 </div>
 @endsection
