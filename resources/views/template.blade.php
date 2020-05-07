@@ -41,7 +41,7 @@
                                     Menu								
                                     </a>
                                     <div class= "dropdown-divider"></div>
-                                    <a class= "dropdown-item" href="#"> 
+                                    <a class= "dropdown-item" href="{{route('logout')}}"> 
                                     <i class="icon-logout"></i>
                                     Logout								
                                     </a>
@@ -77,8 +77,7 @@
                                 </div>
 
                         </div>
-                        </li>
-					
+                        </li>					
 					</ul>
 				</div>
 	</nav>
