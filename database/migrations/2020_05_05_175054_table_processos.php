@@ -18,7 +18,13 @@ class TableProcessos extends Migration
             $table->string("numero",20);
             $table->string("descricao",255);
             $table->string("status",50);
+            $table->unsignedBigInteger('id_cliente');	
+            $table->unsignedBigInteger('id_contraria');
+            $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('id_cliente')->references('id')->on('clientes');	
+            $table->foreign('id_contraria')->references('id')->on('contraria');	
         });
     }
 
