@@ -25,7 +25,8 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    /*
+     public function addCliente(Request $req)
+    {
         $cliente = new Cliente;
         $cliente->nome = $req->input('nome');
         $cliente->data_nascimento = $req->input('data_nasc');
@@ -33,10 +34,9 @@ class ClienteController extends Controller
         $cliente->cpf = $req->input('cpf');
         $cliente->tipo_cliente = $req->input('tipo_cliente');
         $cliente->save();
-        */
-     public function addCliente(Request $req)
-    {
-        return $req->input();
+
+        //$req->session()->flash('status', 'Cliente cadastrado com sucesso!');
+        //return redirect('../../../resources/views/telas_cadastro/cadastro_clientes.blade.php');
     }
 
     public function listarCliente(Request $req)
