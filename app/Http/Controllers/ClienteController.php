@@ -42,7 +42,7 @@ class ClienteController extends Controller
     public function listarCliente(Request $req)
     {
         $data = Cliente::all();
-        return view('lista', ['data'->$data]);
+        return view('listas/lista_clientes', ['data'=>$data]);   
     }
     /**
      * Store a newly created resource in storage.
