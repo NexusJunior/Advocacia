@@ -14,76 +14,112 @@
 </head>
 <body>
 
-<div class= "container-fluid">
-    <div class= "row" id="cabecalho">
-        
-    <nav class= "navbar-expand-lg navbar navbar-dark bg-dark w-100">
+<div class= "container-fluid bg-dark">
+	<div class= "d-flex justify-content-center bg-dark">
 
-			  <button class= "navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" arina-label="Toggle navigation">
-			  <i class="icon-down-open"></i>
-			  </button>
+		<div class= "dropdown">
 
-				<div class= "collapse navbar-collapse" id="navbarNav">
+			<button class= "btn btn-secondary" type="button" data-toggle="dropdown">
+                <div class="d-flex">                
+                    <span class="d-none d-sm-block ">Aplicaçao&nbsp;</span>
+                    <i class="icon-snowflake-o"></i>
+                </div> 
+			</button>
+							
+			<div class= "dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class= "dropdown-item" href="#"> 
+					<i class="icon-home"></i>
+					Menu								
+				</a>
 
-					<ul class= "navbar-nav">
+				<div class= "dropdown-divider"></div>
+
+				<a class= "dropdown-item" href="#"> 
+					<i class="icon-logout"></i>
+					Configuraçoes							
+				</a>
+
+				<div class= "dropdown-divider"></div>
+
+				<a class= "dropdown-item" href="{{route('logout')}}"> 
+					<i class="icon-logout"></i>
+					Logout								
+				</a>
+			</div>
+
+		</div>
 					
-                        <li class= "nav-item">
-                        <div class= "dropdown">
+		<div class= "dropdown">
 
-                                <button class= "btn btn-secondary" type="button" data-toggle="dropdown">
-                                    Aplicaçao
-                                    <i class="icon-snowflake-o"></i>
-                                </button>
-                                
-                                <div class= "dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class= "dropdown-item" href="#"> 
-                                    <i class="icon-home"></i>
-                                    Menu								
-                                    </a>
-                                    <div class= "dropdown-divider"></div>
-                                    <a class= "dropdown-item" href="{{route('logout')}}"> 
-                                    <i class="icon-logout"></i>
-                                    Logout								
-                                    </a>
-                                    <div class= "dropdown-divider"></div>
-                                    <a class= "dropdown-item" href="#"> 
-                                    <i class="icon-cog-alt"></i>
-                                    Configuraçoes								
-                                    </a>
-                                    
-                                </div>
+            <button class="btn btn-secondary" type="button" data-toggle="dropdown">
+                <div class="d-flex">                
+                    <span class="d-none d-sm-block ">Cadastros&nbsp;</span>
+                    <i class="icon-pencil"></i>
+                </div> 
+            </button>
+							
+			<div class= "dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class= "dropdown-item" href="{{route('cliente_cadastro')}}"> 
+					<i class="icon-user-circle-o"></i>	
+					Clientes														
+				</a>
 
-                        </div>
-                        </li>
+				<div class= "dropdown-divider"></div>
 
-                        <li class= "nav-item">
-                        <div class= "dropdown">
+				<a class= "dropdown-item" href="{{route('processo_cadastro')}}"> 
+					<i class="icon-tags"></i>
+					Processos								
+				</a>					
+			</div>
 
-                                <button class= "btn btn-secondary" type="button" data-toggle="dropdown">
-                                    Cadastros
-                                    <i class="icon-pencil"></i>
-                                </button>
-                                
-                                <div class= "dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class= "dropdown-item" href="#"> 
-                                    <i class="icon-user-circle-o"></i>	
-                                    Clientes														
-                                    </a>
-                                    <div class= "dropdown-divider"></div>
-                                    <a class= "dropdown-item" href="#"> 
-                                    <i class="icon-tags"></i>
-                                    Processos								
-                                    </a>								
-                                </div>
+		</div>
+					
+		<div class="dropdown">
 
-                        </div>
-                        </li>					
-					</ul>
-				</div>
-	</nav>
+            <button class="btn btn-secondary" type="button" data-toggle="dropdown">
+                <div class="d-flex">                
+                    <span class="d-none d-sm-block ">&nbsp;&nbsp;Listas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <i class="icon-table"></i>
+                </div> 			
+			</button>
 
+			<div class= "dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class= "dropdown-item" href="{{route('cliente_listar')}}"> 
+					<i class="icon-user-circle-o"></i>	
+					Clientes														
+				</a>
 
-    </div>
+				<div class= "dropdown-divider"></div>
+
+				<a class= "dropdown-item" href="{{route('processos_listar')}}"> 
+					<i class="icon-tags"></i>
+					Produtos								
+				</a>
+			</div>
+
+		</div>	
+				
+		<div class="dropdown">
+
+            <button class="btn btn-secondary" type="button" data-toggle="dropdown">
+                <div class="d-flex">                
+                    <span class="d-none d-sm-block ">Dashboard&nbsp;</span>
+                    <i class="icon-database"></i>
+                </div> 
+            </button>
+
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class= "dropdown-item view_data" href="{{route('dashboard')}}">
+					<i class="icon-chart-line"></i>
+					Indicadores
+				</a>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
 
     <div class = "row" id="conteudo">
 			<div class = "col-md-1">
@@ -95,10 +131,6 @@
 			<div class = "col-md-1">
 				<!-- coluna vazia direita -->
 			</div>
-    </div>
-
-    <div class= "row" id="rodape">
-        @yield('rodape')
     </div>
     
 </div>
