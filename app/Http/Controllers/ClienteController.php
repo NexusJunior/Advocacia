@@ -39,6 +39,11 @@ class ClienteController extends Controller
         //return redirect('../../../resources/views/telas_cadastro/cadastro_clientes.blade.php');
     }
 
+    public function alterarCliente($id){
+        $data = Cliente::find($id);
+        return view('telas_updates/altera_cliente', ['data'=>$data]);
+    }
+
     public function listarCliente(Request $req)
     {
         $data = Cliente::all();
