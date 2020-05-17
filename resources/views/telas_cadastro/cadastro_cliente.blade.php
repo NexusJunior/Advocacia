@@ -1,6 +1,6 @@
 @extends('templates.principal')
-@section('templates.conteudo')
+@section('conteudo')
 <!-- Programe aqui------------------------------------->
-
+<h1>julio</h1>
 <!----------------------------------------------------->
 @endsection

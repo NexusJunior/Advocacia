@@ -8,5 +8,7 @@ use App\Cliente;
 
 class ClienteController extends Controller
 {
-    //
+    function telaCadastro(){
+        return view('telas_cadastro.cadastro_cliente');
+    }
 }

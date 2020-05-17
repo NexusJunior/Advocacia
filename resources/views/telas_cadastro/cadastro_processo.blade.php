@@ -1,5 +1,5 @@
 @extends('templates.principal')
-@section('templates.conteudo')
+@section('conteudo')
 <!-- Programe aqui------------------------------------->
 
 <!----------------------------------------------------->
