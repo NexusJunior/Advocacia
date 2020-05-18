@@ -30,11 +30,13 @@ Route::middleware(['auth'])->group(function(){
 	Route::get('/cliente/alterar/{id}', 'ClienteController@telaAlteracao')
 	->name('cliente_update');
 
-	Route::post('/cliente/adicionar', 'ClienteController@adicionar')
+	Route::post('/cliente/adicionar', 'ClienteController@adicionarCliente')
 	->name('cliente_add');
+	
 
-	Route::post('/cliente/alterar/{id}', 'ClienteController@alterar')
-	->name('cliente_alterar');
+
+	//Route::post('/cliente/alterar/{id}', 'ClienteController@alterar')
+	//->name('cliente_alterar');
 
 	Route::get('/cliente/excluir/{id}', 'ClienteController@excluir')
 	->name('cliente_delete');
@@ -42,7 +44,10 @@ Route::middleware(['auth'])->group(function(){
 	Route::get('/cliente/listar', 'ClienteController@listar')
 	->name('cliente_listar');
 
-	//Produtos................................................................................
+
+
+
+	//Processos................................................................................
 
 	Route::get('/processo/cadastro', 'processoController@telaCadastro')
 	->name('processo_cadastro');
@@ -68,6 +73,5 @@ Route::middleware(['auth'])->group(function(){
 	->name('processos_listar');
 
 });
-
 
 
